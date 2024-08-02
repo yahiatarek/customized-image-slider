@@ -9,7 +9,8 @@
     "test": "ng test",
     "serve:ssr:angular-repo-boilerplate": "node dist/angular-repo-boilerplate/server/server.mjs",
     "pre-commit": "npm run lint && npm run test",
-    "pre-push": "npm run build"
+    "pre-push": "npm run build",
+    "lint": "npm run lint"
   },
   "config": {
     "commitizen": {
