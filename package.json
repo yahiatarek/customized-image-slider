@@ -7,11 +7,18 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:angular-repo-boilerplate": "node dist/angular-repo-boilerplate/server/server.mjs"
+    "serve:ssr:angular-repo-boilerplate": "node dist/angular-repo-boilerplate/server/server.mjs",
+    "pre-commit": "npm run lint && npm run test",
+    "pre-push": "npm run build"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "npm run lint && npm run test",
       "pre-push": "npm run build"
     }
   },
