@@ -1,24 +1,9 @@
 {
-    "lint-staged": {
-      "*.ts": [
-        "eslint",
-        "prettier"
-    ],
-      "*.js": [
-        "eslint",
-        "prettier"
-    ],
-      "*.css": [
-        "stylelint",
-        "prettier"
-    ],
-      "*.scss": [
-        "stylelint",
-        "prettier"
-    ],
-      "*.md": [
-        "prettier"
-    ]
-    }
-  }
-  
+  "*.ts": ["eslint", "prettier"],
+  "*.js": ["eslint", "prettier"],
+  "*.css": ["stylelint", "prettier"],
+  "*.scss": ["stylelint", "prettier"],
+  "*.md": ["prettier"],
+  "*.html": ["prettier"],
+  "*.json": ["prettier"]
+}
