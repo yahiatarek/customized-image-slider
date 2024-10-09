@@ -1,0 +1,13 @@
+<div class="pics-container">
+  @for (item of $items(); track $index) {
+    <picture class="item-picture">
+      <source media="(max-width:375px)" [srcset]="getSrc(item, 320)" />
+      <source media="(max-width:576px)" [srcset]="getSrc(item, 576)" />
+      <source media="(max-width:992px)" [srcset]="getSrc(item, 992)" />
+      <source media="(max-width:1200px)" [srcset]="getSrc(item, 1200)" />
+      <source media="(max-width:1920px)" [srcset]="getSrc(item, 1920)" />
+      <img class="item-img" [src]="item" priority [alt]="item" />
+    </picture>
+  }
+</div>
+<app-slider-overlay (nextImage)="nextImage($event)" (prevImage)="prevImage($event)"></app-slider-overlay>
